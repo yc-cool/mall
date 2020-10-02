@@ -1,28 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view></router-view>
+    <tab-bar>
+      <tab-bar-item path="/home" activeColor='blue'>
+        <i class="fa fa-home"></i>
+        <span>首页</span>
+      </tab-bar-item>
+      <tab-bar-item path="/category">
+        <i class="fa fa-receipt"></i>
+        <i>分类</i>
+      </tab-bar-item>
+      <tab-bar-item path="/cart">
+        <i class="fa fa-shopping-cart"></i>
+        <i>购物车</i>
+      </tab-bar-item>
+      <tab-bar-item path="/profile">
+        <i class="fa fa-user"></i>
+        <i>我的</i>
+      </tab-bar-item>
+    </tab-bar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TabBar from "./components/common/tabbar/TabBar"
+import TabBarItem from "./components/common/tabbar/TabBarItem"
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TabBarItem,
+    TabBar
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./assets/css/reset.css";
+/* @import "./assets/css/normalize.css" */
+/* @import url('./assets/css/base.css'); */
+@import "./assets/css/base.css";
+
 </style>

@@ -1,0 +1,38 @@
+
+:root {
+  --color-text: #666;
+  --color-high-test: #ff5777;
+  --color-tint: #ff8198;
+  --color-background: #fff;
+  --font-size: 14px;
+  --line-height: 1.5;
+  user-select: none;
+}
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+  width: 100vm;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.clear-fix::after{
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.clear-fix {
+  zoom: 1;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
